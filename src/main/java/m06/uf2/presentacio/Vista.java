@@ -8,6 +8,9 @@ package m06.uf2.presentacio;
 import java.util.Scanner;
 import m06.uf2.logic.models.Coupe;
 import m06.uf2.logic.models.Familiar;
+import m06.uf2.logic.models.Motocicleta;
+import m06.uf2.logic.models.Scooter;
+import m06.uf2.logic.models.Trail;
 import m06.uf2.logic.models.Turisme;
 
 /**
@@ -137,4 +140,44 @@ public class Vista {
         ret.setIsSuportCaravana(v.toLowerCase().equals("s"));
         return ret;
     }
+
+    public Motocicleta altaMotocicletaGenerico(Motocicleta ret) {
+
+        System.out.println("Vidrios Tintados (S/N)");
+        String v = scanner.nextLine();
+        ret.setCaballetCentral(v.toLowerCase().equals("s"));
+        System.out.println("Matricula");
+        ret.setMatricula(scanner.nextInt());
+        System.out.println("NÂº Bastidor");
+        ret.setNumBastidor(scanner.nextLine());
+        System.out.println("Numeros de puertas");
+        ret.setCapacitatDm3Maleta(scanner.nextInt());
+        return ret;
+    }
+
+    public Motocicleta altaMotocicletaTrail() {
+        Trail ret = new Trail();
+
+        System.out.println("MM suspensión:");
+        ret.setMmSuspensio(scanner.nextInt());
+        System.out.println("Neumaticos todo terreno?:");
+        String v = scanner.nextLine();
+        ret.setIsNeumaticsTotTerreny(v.toLowerCase().equals("s"));
+
+        return ret;
+    }
+
+    public Motocicleta altaMotocicletaScooter() {
+        Scooter ret = new Scooter();
+
+        System.out.println("MM suspensión:");
+        String v = scanner.nextLine();
+        ret.setIsCiclomotor(v.toLowerCase().equals("s"));
+        System.out.println("Neumaticos todo terreno?:");
+        String v2 = scanner.nextLine();
+        ret.setIsLlumsLed(v.toLowerCase().equals("s"));
+
+        return ret;
+    }
+
 }
