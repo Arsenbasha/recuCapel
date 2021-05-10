@@ -6,6 +6,7 @@
 package m06.uf2.presentacio;
 
 import java.util.Scanner;
+import m06.uf2.logic.models.Coupe;
 
 /**
  *
@@ -82,4 +83,24 @@ public class Vista {
 
     }
 
+    public int typeMotocicleta() {
+        System.out.println("\nElige una opción:");
+        System.out.println("******************************");
+        System.out.println("opcion 1 :Trail");
+        System.out.println("opcion 2 :Scooter");
+        System.out.println("Opción 0: atras");
+        return scanner.nextInt();
+
+    }
+
+    public int typeTurismo() {
+        System.out.println("\nElige una opción:");
+        System.out.println("******************************");
+        System.out.println("opcion 1 :Coupe");
+        System.out.println("opcion 2 :Familiar");
+        System.out.println("Opción 0: atras");
+        return scanner.nextInt();
+
+    }
+    
 }

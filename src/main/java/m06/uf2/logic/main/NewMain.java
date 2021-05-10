@@ -49,7 +49,7 @@ public class NewMain {
         do {
             switch (view.menuVehiculo()) {
                 case 1:
-                  selTipoVehiculo();
+                    selTipoVehiculo();
                     break;
                 case 2:
                     break;
@@ -125,9 +125,26 @@ public class NewMain {
     public static void selTipoVehiculo() {
         boolean atras = false;
         do {
-            switch (view.menuPropietario()) {
+            switch (view.typeVehiculo()) {
                 case 1:
-                    
+                    menuTurismo();
+                    break;
+                case 2:
+                    menuMotocicleta();
+                    break;
+                case 0:
+                    atras = true;
+                    break;
+            }
+        } while (!atras);
+    }
+
+    public static void menuMotocicleta() {
+        boolean atras = false;
+        do {
+            switch (view.typeMotocicleta()) {
+                case 1:
+
                     break;
                 case 2:
                     break;
@@ -137,8 +154,22 @@ public class NewMain {
             }
         } while (!atras);
     }
-    
 
+    public static void menuTurismo() {
+        boolean atras = false;
+        do {
+            switch (view.typeTurismo()) {
+                case 1:
 
+                    break;
+                case 2:
+
+                    break;
+                case 0:
+                    atras = true;
+                    break;
+            }
+        } while (!atras);
+    }
 
 }
