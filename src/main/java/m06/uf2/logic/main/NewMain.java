@@ -139,6 +139,23 @@ public class NewMain {
         } while (!atras);
     }
 
+    public static void menuTurismo() {
+        boolean atras = false;
+        do {
+            switch (view.typeTurismo()) {
+                case 1:
+                    LogicaVehiculo.altaTurismo(view.altaTurismo);
+                    break;
+                case 2:
+
+                    break;
+                case 0:
+                    atras = true;
+                    break;
+            }
+        } while (!atras);
+    }
+
     public static void menuMotocicleta() {
         boolean atras = false;
         do {
@@ -155,21 +172,8 @@ public class NewMain {
         } while (!atras);
     }
 
-    public static void menuTurismo() {
-        boolean atras = false;
-        do {
-            switch (view.typeTurismo()) {
-                case 1:
+    public Turisme datosTurisme() {
 
-                    break;
-                case 2:
-
-                    break;
-                case 0:
-                    atras = true;
-                    break;
-            }
-        } while (!atras);
     }
 
 }

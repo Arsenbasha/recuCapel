@@ -7,6 +7,7 @@ package m06.uf2.presentacio;
 
 import java.util.Scanner;
 import m06.uf2.logic.models.Coupe;
+import m06.uf2.logic.models.Turisme;
 
 /**
  *
@@ -102,5 +103,12 @@ public class Vista {
         return scanner.nextInt();
 
     }
-    
+
+    public Turisme altaTurismo() {
+        Turisme ret = null;
+
+        
+        return ret;
+    }
+
 }
