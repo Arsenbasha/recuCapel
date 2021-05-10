@@ -7,6 +7,7 @@ package m06.uf2.presentacio;
 
 import java.util.Scanner;
 import m06.uf2.logic.models.Coupe;
+import m06.uf2.logic.models.Familiar;
 import m06.uf2.logic.models.Turisme;
 
 /**
@@ -105,8 +106,6 @@ public class Vista {
     }
 
     public Turisme altaTurismoGenerico(Turisme ret) {
-
-        ret.setNumPortes(scanner.nextInt());
         System.out.println("Vidrios Tintados (S/N)");
         String v = scanner.nextLine();
         ret.setVidresTintats(v.toLowerCase().equals("s"));
@@ -120,11 +119,22 @@ public class Vista {
     }
 
     public Turisme altaTurismoCoupe() {
-        Turisme ret = null;
+        Coupe ret = new Coupe();
+        System.out.println("Cuantos caballos tiene ");
+        ret.setCavallsMotor(scanner.nextInt());
+        System.out.println("Techo rectactil (S/N)");
+        String v = scanner.nextLine();
+        ret.setIsSostreRetractil(v.toLowerCase().equals("s"));
         return ret;
     }
+
     public Turisme altaTurismoFamiliar() {
-        Turisme ret = null;
+        Familiar ret = new Familiar();
+        System.out.println("Capacidad Maletero ");
+        ret.setCapacitatDm3Maleter(scanner.nextInt());
+        System.out.println("Techo rectactil (S/N)");
+        String v = scanner.nextLine();
+        ret.setIsSuportCaravana(v.toLowerCase().equals("s"));
         return ret;
     }
 }

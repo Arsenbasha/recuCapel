@@ -6,6 +6,8 @@
 package m06.uf2.logic.main;
 
 import java.util.Scanner;
+import m06.uf2.logic.models.Coupe;
+import m06.uf2.logic.models.Familiar;
 import m06.uf2.presentacio.Vista;
 
 /**
@@ -144,10 +146,10 @@ public class NewMain {
         do {
             switch (view.typeTurismo()) {
                 case 1:
-                    LogicaVehiculo.altaTurismo(view.altaTurismo);
+                    ProjectAPI.vehicleFactory(Coupe.class);
                     break;
                 case 2:
-
+                    ProjectAPI.vehicleFactory(Familiar.class);
                     break;
                 case 0:
                     atras = true;
@@ -170,10 +172,6 @@ public class NewMain {
                     break;
             }
         } while (!atras);
-    }
-
-    public Turisme datosTurisme() {
-
     }
 
 }
