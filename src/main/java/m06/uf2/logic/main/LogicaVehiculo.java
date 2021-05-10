@@ -22,7 +22,7 @@ public class LogicaVehiculo {
         Turisme ret = null;
         if (tipus == Coupe.class) {
             ret = new Coupe();
-view.
+            view.altaTurismo();
         } else {
             ret = new Familiar();
         }

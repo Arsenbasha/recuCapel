@@ -104,11 +104,27 @@ public class Vista {
 
     }
 
-    public Turisme altaTurismo() {
-        Turisme ret = null;
+    public Turisme altaTurismoGenerico(Turisme ret) {
 
-        
+        ret.setNumPortes(scanner.nextInt());
+        System.out.println("Vidrios Tintados (S/N)");
+        String v = scanner.nextLine();
+        ret.setVidresTintats(v.toLowerCase().equals("s"));
+        System.out.println("Matricula");
+        ret.setMatricula(scanner.nextInt());
+        System.out.println("Nº Bastidor");
+        ret.setNumBastidor(scanner.nextLine());
+        System.out.println("Numeros de puertas");
+        ret.setNumPortes(scanner.nextInt());
         return ret;
     }
 
+    public Turisme altaTurismoCoupe() {
+        Turisme ret = null;
+        return ret;
+    }
+    public Turisme altaTurismoFamiliar() {
+        Turisme ret = null;
+        return ret;
+    }
 }
